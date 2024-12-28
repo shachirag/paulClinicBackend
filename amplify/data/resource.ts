@@ -9,12 +9,20 @@ and "delete" any "Todo" records.
 const schema = a.schema({
   Todo: a
     .model({
-      content: a.string(),
-      isDone: a.boolean(),
+      title: a.string(),
+      firstName: a.string(),
+      lastName: a.string(),
+      email: a.string(),
+      image: a.string(),
+      gender: a.string(),
+      role: a.string(),
+      dateOfBirth: a.string(), 
+      createdAt: a.string(),   
+      updatedAt: a.string(),
+      methodType: a.string().required(),
     })
     .authorization((allow) => [
       allow.guest(),
-
     ]),
 });
 
