@@ -44,7 +44,7 @@ import type { Schema } from "@/amplify/data/resource";
 
 const client = generateClient<Schema>() // use this Data client for CRUDL requests
 */
-
+ 
 
 /*== STEP 3 ===============================================================
 Fetch records from the database and use them in your frontend component.
