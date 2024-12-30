@@ -66,7 +66,7 @@ const addEmployee = async (employee: EmployeeInput) => {
   const region = process.env.AWS_REGION || 'ap-south-1';
   const cognitoClient = new CognitoIdentityProviderClient({ region });
 
-  const userPoolID = process.env.COGNITO_USER_POOL_ID;
+  const userPoolID = 'ap-south-1_xfweYRmRF';
   if (!userPoolID) {
     throw new Error("Missing Cognito user pool ID");
   }
@@ -118,7 +118,7 @@ export const updateEmployee = async (event: EmployeeInput): Promise<void> => {
   const region = process.env.AWS_REGION || 'ap-south-1';
   const cognitoClient = new CognitoIdentityProviderClient({ region });
 
-  const userPoolID = process.env.COGNITO_USER_POOL_ID;
+  const userPoolID = 'ap-south-1_xfweYRmRF';
   if (!userPoolID) {
     throw new Error('Missing Cognito user pool ID');
   }
@@ -169,7 +169,7 @@ export const getEmployeeDetails = async (id: string): Promise<AdminGetUserComman
   const region = process.env.AWS_REGION || 'ap-south-1';
   const cognitoClient = new CognitoIdentityProviderClient({ region });
 
-  const userPoolID = process.env.COGNITO_USER_POOL_ID;
+  const userPoolID = 'ap-south-1_xfweYRmRF';
   if (!userPoolID) {
     throw new Error('Missing Cognito user pool ID');
   }
@@ -202,10 +202,10 @@ export const deleteEmployee = async (email: string): Promise<void> => {
     throw new Error('Email is required');
   }
 
-  const region = process.env.AWS_REGION || 'ap-south-1';
+  const region = 'ap-south-1';
   const cognitoClient = new CognitoIdentityProviderClient({ region });
 
-  const userPoolID = process.env.COGNITO_USER_POOL_ID;
+  const userPoolID = 'ap-south-1_xfweYRmRF';
   if (!userPoolID) {
     throw new Error('Missing Cognito user pool ID');
   }
@@ -229,7 +229,7 @@ export const listEmployees = async (): Promise<any[]> => {
   const region = process.env.AWS_REGION || 'ap-south-1';
   const cognitoClient = new CognitoIdentityProviderClient({ region });
 
-  const userPoolID = process.env.COGNITO_USER_POOL_ID;
+  const userPoolID = 'ap-south-1_xfweYRmRF';
   if (!userPoolID) {
     throw new Error('Missing Cognito user pool ID');
   }
