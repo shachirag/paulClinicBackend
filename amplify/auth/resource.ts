@@ -14,5 +14,5 @@ export const auth = defineAuth({
 
 export const employeeHandler = defineFunction({
   name: 'employee-handler',
-  entry: './functions/addEmployeeInCognito.ts', 
+  entry: 'addEmployeeInCognito.ts', 
 });
