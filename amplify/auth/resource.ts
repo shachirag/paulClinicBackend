@@ -1,5 +1,5 @@
 import { defineAuth } from '@aws-amplify/backend';
-// import { defineFunction } from '@aws-amplify/backend';
+import { defineFunction } from '@aws-amplify/backend';
 
 
 /**
@@ -12,7 +12,7 @@ export const auth = defineAuth({
   },
 });
 
-// export const employeeHandler = defineFunction({
-//   name: 'employee-handler',
-//   entry: 'amplify/backend/addEmployeeInCognito.ts', 
-// });
+export const employeeHandler = defineFunction({
+  name: 'employee-handler',
+  entry: './functions/addEmployeeInCognito.ts', 
+});
